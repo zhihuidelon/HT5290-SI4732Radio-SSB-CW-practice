@@ -1,5 +1,7 @@
 # HT5290 Network Radio Introduction
 
+<img src="https://ecn6a79btdm3.feishu.cn/space/api/box/stream/download/asynccode/?code=ZWYzZWU5ZTYxYjNjNDUyNDdlN2I0ZjMxOWI5YzEzNzFfNGx4cDh3a3dzeGpHY0pJZ1Nla3M4SEtVTHp0SzcxbFVfVG9rZW46SFE5amIxUUdlb2w1TjZ4Y2JEWWM3QUhEbk9lXzE3OTI0OTA0MzI6MTc5MjQ5NDAzMl9WNA&add_watermark=true&scene_type=CCM" alt="HT5290 Network Radio" width="100%" />
+
 1. **Network / Radio**: WiFi network radio, favorites, playback
 2. **FM / Radio**: FM, LW long wave, MW medium wave, SW shortwave, OIRT, AIR aviation band, with SSB/CW reception support
 3. **System / Settings**: language, timer, WiFi, brightness, lock screen, theme, factory reset, and related settings
