@@ -1,6 +1,7 @@
 # HT5290 Network Radio Introduction
 
 <img width="2364" height="1773" alt="HT5290_图1_正面精修_白底" src="https://github.com/user-attachments/assets/cc2ddbfd-ea3b-4abe-aba2-832c4f466313" />
+<img width="4096" height="3072" alt="5290" src="https://github.com/user-attachments/assets/826f87b9-64f0-4c79-954d-72a0971883ca" />
 
 
 1. **Network / Radio**: WiFi network radio, favorites, playback
