@@ -1,67 +1,122 @@
-# HT5290-SI4732Radio-SSB-CW-practice
+# HT5290 SI4732 Radio SSB/CW Practice
 
-## Project Overview
+A compact radio receiver and practice project built around the SI4732 chip, focused on shortwave listening, SSB reception, and CW training. This repository is intended as a practical development platform for experimenting with radio front-end control, tuning, filtering, and signal processing.
 
-This project is based on the SI4732 radio receiver chip and is aimed at shortwave radio learning and experimentation, with a focus on SSB (Single Sideband) and CW (Continuous Wave / Morse code) scenarios.
+## Overview
 
-The combination of HT5290, SI4732, SSB, and CW indicates that the project is mainly used for:
+This project combines the HT5290 hardware platform with the SI4732 radio receiver IC to create a flexible shortwave radio development environment. The design is aimed at users who want to explore:
 
-- Shortwave receiver or radio experimentation development
-- Learning and validating SI4732 control and AM/FM/SSB-related behavior
-- Practicing SSB and CW reception and signal processing
-- Providing a foundation for hardware development, debugging, and experiments
+- Shortwave receiver operation
+- SSB signal reception and demodulation
+- CW/Morse code practice and decoding
+- Embedded radio control and tuning logic
+- Hardware experimentation with a real RF receiver module
 
-## What This Project Does
+The project is especially useful for radio enthusiasts, amateur radio learners, and developers who want to understand how a modern receiver chip such as the SI4732 can be integrated into a practical radio system.
 
-From an engineering perspective, this type of project is typically used for the following purposes:
+## Project Purpose
 
-1. Shortwave listening
-   - Receive AM, FM, SSB, and other signal bands through the SI4732 chip
-   - Suitable for shortwave broadcasting, amateur radio, and signal monitoring scenarios
+The main goal of this project is to provide a simple but extensible platform for learning and testing radio-related functionality in a real hardware context. Instead of just studying theory, the project focuses on hands-on interaction with a receiver chip, signal modes, and tuning behavior.
 
-2. SSB receive/learning
-   - Study the principles of single-sideband modulation and demodulation
-   - Used for radio communication training and experiments
+Typical use cases include:
 
-3. CW (Morse code) practice
-   - Practice continuous-wave signal transmission, reception, and decoding
-   - Suitable for amateur radio and electronics communication learning
+- Listening to AM and FM broadcast bands
+- Testing shortwave reception
+- Exploring single-sideband operation
+- Practicing CW reception and signal decoding
+- Validating receiver tuning and filtering behavior
+- Building a base project for future radio applications
 
-4. Hardware development platform
-   - Integrate with HT5290-type control boards or development platforms
-   - Provide a basic development environment for radio functions, displays, buttons, and audio processing
+## Features
 
-## Key Features
+- SI4732-based receiver integration
+- Shortwave radio exploration and tuning
+- Support for multiple radio modes such as AM, FM, and SSB
+- CW-oriented practice and signal experimentation
+- Flexible hardware/software structure for learning and modification
+- Suitable for embedded systems and radio development experiments
+- Easy to expand with display, controls, audio, and filtering features
 
-- Based on the SI4732 as the core RF/receiver module
-- Supports multiple reception modes and band requirements
-- Focused on SSB/CW communication training and experimentation
-- Suitable for hardware development, code-driven control, signal debugging, and functional validation
-- Useful for learning radio reception, communication protocols, and embedded control
+## Supported Modes
 
-## Target Users
+This project is designed around the radio modes most commonly used in practice and experimentation:
 
-- Radio enthusiasts
-- Amateur radio learners
-- Embedded hardware developers
-- Developers interested in SI4732 radio modules
-- SSB/CW practice and shortwave reception experimenters
+- AM: standard broadcast and general reception
+- FM: local and VHF-style tuning scenarios
+- SSB: upper and lower sideband signal reception
+- CW: Morse code training and signal detection
+
+## Hardware Concept
+
+The system is centered on the following components:
+
+- HT5290 controller/development board
+- SI4732 radio receiver chip
+- Audio output path for audio monitoring
+- Frequency tuning and mode control logic
+- Optional display, buttons, or external control interface
+
+This makes the project suitable for prototype development, receiver experiments, and educational demonstrations.
+
+## Software Concept
+
+The software side of the project is intended to provide control over:
+
+- Frequency selection
+- Band and mode switching
+- Gain and filter configuration
+- Volume and audio routing
+- Receiver status monitoring
+- SSB/CW tuning behavior and experimentation
+
+The codebase is envisioned as a lightweight platform for developing the logic required to operate the radio receiver efficiently and predictably.
+
+## Typical Workflow
+
+1. Power on the hardware platform.
+2. Initialize the SI4732 receiver module.
+3. Select the desired band and frequency.
+4. Choose the operating mode such as AM, FM, SSB, or CW.
+5. Tune the receiver and monitor the output signal.
+6. Adjust gain, bandwidth, and audio controls as needed.
+7. Use the system for learning, testing, or communication practice.
+
+## Use Cases
+
+This project can be used for:
+
+- Educational shortwave radio experiments
+- Amateur radio learning
+- SSB listening and testing
+- CW training and signal recognition
+- Embedded radio interface development
+- Receiver development and debugging
+
+## Repository Goals
+
+This repository is intended to serve as a practical, experimental, and educational foundation for SI4732-based radio work. It focuses on real-world behavior and learning by building, testing, and modifying the system rather than only describing concepts abstractly.
+
+## Roadmap
+
+The project may evolve in the following directions:
+
+- Hardware wiring and connection documentation
+- Receiver initialization and configuration examples
+- SSB tuning and filter settings
+- CW practice and signal monitoring support
+- Display and control interface improvements
+- Debugging notes and tuning recommendations
+- Expanded examples for practical radio usage
 
 ## Project Status
 
-The repository is currently in the initialization and documentation stage. The README is intended to describe the project direction and goals. If code, schematics, drivers, or firmware documentation are added later, this section will be updated accordingly.
+This repository is currently in an early-stage documentation and project-setup phase. The core objective is to define the project direction, describe the radio workflow, and establish a clean foundation for future hardware and software development.
 
-## Planned Improvements
+## License
 
-The following items are recommended for future development:
+This project is intended for educational and experimental use. Please check the repository for the exact licensing terms before using it in production or redistribution.
 
-- Hardware connection diagram
-- SI4732 control documentation
-- SSB/CW debugging workflow
-- Code structure overview
-- Feature list and usage instructions
-- Common issues and debugging notes
+## Summary
 
-## Note
+HT5290 SI4732 Radio SSB/CW Practice is a practical radio development project for learning, experimenting, and building around the SI4732 receiver chip. It centers on shortwave listening, SSB reception, and CW practice while providing a flexible base for further electronic and embedded design work.
 
-The core value of this repository is not a single standalone application, but a development foundation for shortwave reception, SSB/CW training, and radio experiments centered around SI4732. It is more of a learning, experimentation, and validation-oriented project.
