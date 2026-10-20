@@ -1,122 +1,128 @@
-# HT5290 SI4732 Radio SSB/CW Practice
+# HT5290 Network Radio Introduction
 
-A compact radio receiver and practice project built around the SI4732 chip, focused on shortwave listening, SSB reception, and CW training. This repository is intended as a practical development platform for experimenting with radio front-end control, tuning, filtering, and signal processing.
+## 1. Network / Radio
 
-## Overview
+- Network radio: WiFi network radio, favorites, playback
+- FM / radio: FM, LW long wave, MW medium wave, SW shortwave, OIRT, AIR aviation band, with SSB/CW reception support
+- System / settings: language, timer, WiFi, brightness, lock screen, theme, factory reset, and related settings
+- Computer / sound card: USB sound card mode, entering this mode will restart the device
+- PC / configuration: USB configuration mode, used for reading and writing parameters through a PC tool; entering this mode will restart the device
+- Weather / meteorology: view weather online after connecting to the network; requires city or location configuration
+- Clock / calendar: time, perpetual calendar, NTP auto-sync, time zone settings
+- SSB / CW: single-sideband reception, Morse CW decoding, CW key practice
+- Voice prompt broadcast: supports Chinese and English announcements
 
-This project combines the HT5290 hardware platform with the SI4732 radio receiver IC to create a flexible shortwave radio development environment. The design is aimed at users who want to explore:
+## 2. Network Radio
 
-- Shortwave receiver operation
-- SSB signal reception and demodulation
-- CW/Morse code practice and decoding
-- Embedded radio control and tuning logic
-- Hardware experimentation with a real RF receiver module
+Network radio requires a 2.4G WiFi connection.
 
-The project is especially useful for radio enthusiasts, amateur radio learners, and developers who want to understand how a modern receiver chip such as the SI4732 can be integrated into a practical radio system.
+- Volume range: 0-30, default 20
+- Volume is stored independently from radio volume
+- Playback states: playing, buffering, connected, paused, playback error
+- Menu includes: station list, my favorites, last 5 played, sound effects, background playback
+- Two ways to add stations:
+  1. Connect to the device hotspot `HT5290-NetRadio` with password `12345678`, then visit `http://192.168.4.1`; up to 10 stations can be added
+  2. Use the PC configuration tool; up to 1000 stations can be written at one time, and the device supports up to 1500 total stations
+- Supports direct MP3 stream links via HTTP/HTTPS, including live addresses from Qingting and other services
+- Single URL length supports up to 192 characters
+- Supports playback of audio streams that are not natively supported by the radio by using external bridge software on a PC and routing the stream to the device through WiFi
 
-## Project Purpose
+## 3. Playable Software
 
-The main goal of this project is to provide a simple but extensible platform for learning and testing radio-related functionality in a real hardware context. Instead of just studying theory, the project focuses on hands-on interaction with a receiver chip, signal modes, and tuning behavior.
+The radio system cannot natively play certain formats such as `.aac`, `.m4a`, `.wav`, `.ogg`, and `.m3u8` like Android or other operating systems. During playback, these formats may stutter or be blocked, so only smooth MP3 streaming is retained for direct playback.
 
-Typical use cases include:
+If you need to play such audio files, you can use the "CanPlay" software on a PC.
 
-- Listening to AM and FM broadcast bands
-- Testing shortwave reception
-- Exploring single-sideband operation
-- Practicing CW reception and signal decoding
-- Validating receiver tuning and filtering behavior
-- Building a base project for future radio applications
+- Run the software on a computer
+- Copy the playable stream link into the software
+- Assign a custom channel number and a single stream URL
+- Import the channel number and URL into the radio through a mobile app or PC configuration tool
+- Then the radio can play normally through the configured channel
 
-## Features
+This method allows audio streams that the radio cannot decode directly to be bridged to the home router or WiFi network and then accessed by the radio as normal channels.
 
-- SI4732-based receiver integration
-- Shortwave radio exploration and tuning
-- Support for multiple radio modes such as AM, FM, and SSB
-- CW-oriented practice and signal experimentation
-- Flexible hardware/software structure for learning and modification
-- Suitable for embedded systems and radio development experiments
-- Easy to expand with display, controls, audio, and filtering features
+## 4. Smart Clock and Weather System
 
-## Supported Modes
+- NTP auto time synchronization
+- Perpetual calendar support
+- 12/24-hour time format support
+- Built-in clock chip keeps accurate time after WiFi or manual setup; power-loss memory is supported
+- Online weather retrieval via network
+- Domestic support: 9-digit city code input
+- International support: English city names / latitude and longitude input
+- Displays temperature, humidity, wind strength, and other meteorological information
+- Scheduled power on/off support
+- Daily scheduled power on/off is supported
+- Scheduled power-on can choose to directly play FM or network radio after wake-up
 
-This project is designed around the radio modes most commonly used in practice and experimentation:
+## 5. WiFi Configuration
 
-- AM: standard broadcast and general reception
-- FM: local and VHF-style tuning scenarios
-- SSB: upper and lower sideband signal reception
-- CW: Morse code training and signal detection
+- Only supports 2.4GHz WiFi, not 5G
+- Maximum of 3 WiFi profiles can be saved; the 4th profile will overwrite the oldest saved network
+- Example saved networks: home, office, mobile hotspot
+- Device hotspot name: `HT5290-NetRadio`
+- Password: `12345678`
+- Configuration page address: `192.168.4.1`
+- Configuration entry: System Settings → WiFi Settings → Network Connection
+- Network radio, weather, and NTP time synchronization all depend on WiFi
+- WiFi can also be configured through PC software by selecting the WiFi name and entering the password
 
-## Hardware Concept
+## 6. System / Settings
 
-The system is centered on the following components:
+1. Language: supports 21 languages
+2. Timer: scheduled power on/off, wake-up audio selection, FM or network radio
+3. WiFi: WiFi switch, network connection
+4. Brightness: display brightness adjustment
+5. Lock screen: screensaver brightness and screensaver timeout
+6. Theme: custom display color settings
+7. Voice prompts: announcement language switch
+8. Factory reset and related system operations
 
-- HT5290 controller/development board
-- SI4732 radio receiver chip
-- Audio output path for audio monitoring
-- Frequency tuning and mode control logic
-- Optional display, buttons, or external control interface
+## 7. FM / Radio Features
 
-This makes the project suitable for prototype development, receiver experiments, and educational demonstrations.
+The radio system supports multiple band modes and reception functions, including:
 
-## Software Concept
+- FM
+- LW long wave
+- MW medium wave
+- SW shortwave
+- OIRT
+- AIR aviation band
+- SSB reception
+- CW reception
 
-The software side of the project is intended to provide control over:
+This makes the device suitable for both standard broadcast listening and advanced radio practice.
 
-- Frequency selection
-- Band and mode switching
-- Gain and filter configuration
-- Volume and audio routing
-- Receiver status monitoring
-- SSB/CW tuning behavior and experimentation
+## 8. SSB / CW
 
-The codebase is envisioned as a lightweight platform for developing the logic required to operate the radio receiver efficiently and predictably.
+The SSB/CW module provides:
 
-## Typical Workflow
+- Single-sideband reception
+- Morse CW decoding
+- CW key training practice
+- Advanced tuning support for radio communication and learning scenarios
 
-1. Power on the hardware platform.
-2. Initialize the SI4732 receiver module.
-3. Select the desired band and frequency.
-4. Choose the operating mode such as AM, FM, SSB, or CW.
-5. Tune the receiver and monitor the output signal.
-6. Adjust gain, bandwidth, and audio controls as needed.
-7. Use the system for learning, testing, or communication practice.
+## 9. Voice Prompt Broadcast
 
-## Use Cases
+The system supports voice prompts in:
 
-This project can be used for:
+- Chinese
+- English
 
-- Educational shortwave radio experiments
-- Amateur radio learning
-- SSB listening and testing
-- CW training and signal recognition
-- Embedded radio interface development
-- Receiver development and debugging
+This feature improves usability and allows users to receive audio feedback for settings, playback status, and system actions.
 
-## Repository Goals
+## 10. Summary
 
-This repository is intended to serve as a practical, experimental, and educational foundation for SI4732-based radio work. It focuses on real-world behavior and learning by building, testing, and modifying the system rather than only describing concepts abstractly.
+The HT5290 network radio is a multifunctional internet-enabled radio device designed for modern listening, configuration, and radio practice. It combines network radio playback, FM/LW/MW/SW reception, SSB/CW support, weather and clock functions, WiFi networking, and voice announcement features in a single platform.
 
-## Roadmap
+It is suitable for:
 
-The project may evolve in the following directions:
+- Daily radio listening
+- Shortwave and SSB exploration
+- Morse code practice and CW learning
+- Network radio streaming
+- Weather and time synchronization features
+- Smart home-style radio device usage
 
-- Hardware wiring and connection documentation
-- Receiver initialization and configuration examples
-- SSB tuning and filter settings
-- CW practice and signal monitoring support
-- Display and control interface improvements
-- Debugging notes and tuning recommendations
-- Expanded examples for practical radio usage
-
-## Project Status
-
-This repository is currently in an early-stage documentation and project-setup phase. The core objective is to define the project direction, describe the radio workflow, and establish a clean foundation for future hardware and software development.
-
-## License
-
-This project is intended for educational and experimental use. Please check the repository for the exact licensing terms before using it in production or redistribution.
-
-## Summary
-
-HT5290 SI4732 Radio SSB/CW Practice is a practical radio development project for learning, experimenting, and building around the SI4732 receiver chip. It centers on shortwave listening, SSB reception, and CW practice while providing a flexible base for further electronic and embedded design work.
+This design balances user-friendly control, feature-rich radio operation, and practical embedded-device functionality.
 
