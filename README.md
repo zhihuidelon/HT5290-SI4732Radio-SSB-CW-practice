@@ -1,128 +1,140 @@
 # HT5290 Network Radio Introduction
 
-## 1. Network / Radio
+1. **Network / Radio**: WiFi network radio, favorites, playback
+2. **FM / Radio**: FM, LW long wave, MW medium wave, SW shortwave, OIRT, AIR aviation band, with SSB/CW reception support
+3. **System / Settings**: language, timer, WiFi, brightness, lock screen, theme, factory reset, and related settings
+4. **Computer / Sound Card**: USB sound card mode; entering this mode restarts the device
+5. **PC / Configuration**: USB configuration mode for reading and writing parameters through a PC tool; entering this mode restarts the device
+6. **Weather / Meteorology**: check weather online via network; requires city or location configuration
+7. **Clock / Calendar**: time, perpetual calendar, NTP auto-sync, time zone settings
+8. **SSB / CW**: single-sideband reception, Morse CW decoding, CW key practice
+9. **Voice Prompt Broadcast**: supports Chinese and English announcements
 
-- Network radio: WiFi network radio, favorites, playback
-- FM / radio: FM, LW long wave, MW medium wave, SW shortwave, OIRT, AIR aviation band, with SSB/CW reception support
-- System / settings: language, timer, WiFi, brightness, lock screen, theme, factory reset, and related settings
-- Computer / sound card: USB sound card mode, entering this mode will restart the device
-- PC / configuration: USB configuration mode, used for reading and writing parameters through a PC tool; entering this mode will restart the device
-- Weather / meteorology: view weather online after connecting to the network; requires city or location configuration
-- Clock / calendar: time, perpetual calendar, NTP auto-sync, time zone settings
-- SSB / CW: single-sideband reception, Morse CW decoding, CW key practice
-- Voice prompt broadcast: supports Chinese and English announcements
-
-## 2. Network Radio
+# Network / Radio
 
 Network radio requires a 2.4G WiFi connection.
 
 - Volume range: 0-30, default 20
-- Volume is stored independently from radio volume
+- Volume is stored independently from the radio volume
 - Playback states: playing, buffering, connected, paused, playback error
 - Menu includes: station list, my favorites, last 5 played, sound effects, background playback
-- Two ways to add stations:
+- Two ways to add radio stations:
   1. Connect to the device hotspot `HT5290-NetRadio` with password `12345678`, then visit `http://192.168.4.1`; up to 10 stations can be added
   2. Use the PC configuration tool; up to 1000 stations can be written at one time, and the device supports up to 1500 total stations
-- Supports direct MP3 stream links via HTTP/HTTPS, including live addresses from Qingting and other services
-- Single URL length supports up to 192 characters
-- Supports playback of audio streams that are not natively supported by the radio by using external bridge software on a PC and routing the stream to the device through WiFi
+- Supports direct MP3 stream links via HTTP/HTTPS, including Qingting and other live-streaming URLs
+- A single URL can be up to 192 characters long
+- Supports playback of other stream sources through the "CanPlay" software on a PC, which bridges unsupported audio links such as `.aac`, `.m4a`, `.wav`, `.ogg`, and `.m3u8` and routes them to the radio over WiFi
 
-## 3. Playable Software
+# CanPlay Software
 
-The radio system cannot natively play certain formats such as `.aac`, `.m4a`, `.wav`, `.ogg`, and `.m3u8` like Android or other operating systems. During playback, these formats may stutter or be blocked, so only smooth MP3 streaming is retained for direct playback.
+1. The radio cannot natively play formats such as `.aac`, `.m4a`, `.wav`, `.ogg`, and `.m3u8` in the same way as Android or other systems. During playback, these formats may stutter or be blocked, so only smooth MP3 streaming is retained for direct playback.
+2. When such audio files need to be played, use the "CanPlay" software on a PC. Run the software on a computer, copy the playable stream link into the software, create a custom channel number and a single playback URL, then import the channel number and URL into the radio using a phone or PC configuration tool. The radio can then listen normally through the configured channel.
 
-If you need to play such audio files, you can use the "CanPlay" software on a PC.
+# Smart Clock and Weather System
 
-- Run the software on a computer
-- Copy the playable stream link into the software
-- Assign a custom channel number and a single stream URL
-- Import the channel number and URL into the radio through a mobile app or PC configuration tool
-- Then the radio can play normally through the configured channel
+- NTP auto time synchronization, perpetual calendar, supports 12/24-hour time format
+- Built-in clock chip keeps accurate time automatically after WiFi or manual time setting; power-loss memory support
+- Weather is obtained online: in China, a 9-digit city code can be entered; overseas users can set English place names or latitude/longitude; temperature, humidity, wind force, and other weather information are displayed
+- Timed power on/off is supported: daily scheduled power on/off; scheduled power-on can directly play FM or network radio after wake-up
 
-This method allows audio streams that the radio cannot decode directly to be bridged to the home router or WiFi network and then accessed by the radio as normal channels.
-
-## 4. Smart Clock and Weather System
-
-- NTP auto time synchronization
-- Perpetual calendar support
-- 12/24-hour time format support
-- Built-in clock chip keeps accurate time after WiFi or manual setup; power-loss memory is supported
-- Online weather retrieval via network
-- Domestic support: 9-digit city code input
-- International support: English city names / latitude and longitude input
-- Displays temperature, humidity, wind strength, and other meteorological information
-- Scheduled power on/off support
-- Daily scheduled power on/off is supported
-- Scheduled power-on can choose to directly play FM or network radio after wake-up
-
-## 5. WiFi Configuration
+# WiFi Setup
 
 - Only supports 2.4GHz WiFi, not 5G
-- Maximum of 3 WiFi profiles can be saved; the 4th profile will overwrite the oldest saved network
+- Up to 3 WiFi networks can be saved; the 4th will overwrite the earliest saved network
 - Example saved networks: home, office, mobile hotspot
 - Device hotspot name: `HT5290-NetRadio`
 - Password: `12345678`
 - Configuration page address: `192.168.4.1`
 - Configuration entry: System Settings → WiFi Settings → Network Connection
-- Network radio, weather, and NTP time synchronization all depend on WiFi
+- Network radio, weather, and NTP auto-sync all rely on WiFi
 - WiFi can also be configured through PC software by selecting the WiFi name and entering the password
 
-## 6. System / Settings
+# System / Settings
 
 1. Language: supports 21 languages
 2. Timer: scheduled power on/off, wake-up audio selection, FM or network radio
-3. WiFi: WiFi switch, network connection
+3. WiFi: WiFi switch and network connection
 4. Brightness: display brightness adjustment
-5. Lock screen: screensaver brightness and screensaver timeout
+5. Lock screen: screensaver brightness and timeout
 6. Theme: custom display color settings
-7. Voice prompts: announcement language switch
-8. Factory reset and related system operations
+7. Voice prompt: announcement language switch
+8. Factory reset and other system operations
 
-## 7. FM / Radio Features
+# FM / Radio / Aviation / Single Sideband / CW Decoding
 
-The radio system supports multiple band modes and reception functions, including:
+FM receive sensitivity: -90 dBm to -99 dBm
 
-- FM
-- LW long wave
-- MW medium wave
-- SW shortwave
-- OIRT
-- AIR aviation band
-- SSB reception
-- CW reception
+Band frequency range notes:
 
-This makes the device suitable for both standard broadcast listening and advanced radio practice.
+- FM (ordinary FM): 87-108 MHz, supports RDS
+- Long press the knob to read RDS text
+- Stereo and de-emphasis settings
+- OIRT (Eastern European FM): 64-75 MHz
+- Old Eastern European FM broadcasts; also supports RDS/RBDS
+- LW long wave: 153-279 kHz
+- MW medium wave: 522-1701 kHz
+- SW shortwave: 2.3-26.1 MHz
+- SSB/CW operates within this shortwave range
+- Switch to SSB/CW mode for LSB/USB sideband + BFO beat frequency
 
-## 8. SSB / CW
+## AIR Aviation Band (VHF Airband)
 
-The SSB/CW module provides:
+- Frequency: 108-137 MHz
+- Step size can be switched:
+  - China mode: 25 kHz
+  - Europe mode: 8.33 kHz
 
-- Single-sideband reception
-- Morse CW decoding
-- CW key training practice
-- Advanced tuning support for radio communication and learning scenarios
+> Note: Aviation band is receive-only and does not support transmission.
 
-## 9. Voice Prompt Broadcast
+## SSB / CW (Single Sideband and Morse Code Reception)
 
-The system supports voice prompts in:
+> Warning: SSB and CW do not have independent hardware frequency bands. They share the SW shortwave range from 2.3-26.1 MHz. The single-sideband demodulation mode is enabled only when entering the SSB/CW function menu.
 
-- Chinese
-- English
+### SSB Reception
 
-This feature improves usability and allows users to receive audio feedback for settings, playback status, and system actions.
+- Available sidebands: LSB and USB
+- Frequency range: 2.3 MHz to 26.1 MHz
+- Adjustable parameters: BFO beat frequency, bandwidth, frequency step, beat-step; screen shows signal strength and SNR; long-press numeric input is supported for frequency entry
 
-## 10. Summary
+### CW (Morse Code)
 
-The HT5290 network radio is a multifunctional internet-enabled radio device designed for modern listening, configuration, and radio practice. It combines network radio playback, FM/LW/MW/SW reception, SSB/CW support, weather and clock functions, WiFi networking, and voice announcement features in a single platform.
+1. **CW decoding (receive mode)**: uses the same 2.3-26.1 MHz range to receive Morse signals from the air; the screen directly translates the code into text; adjustable WPM rate, threshold, and tone
+2. **CW practice (local mode)**: connect an external key to practice sending locally; this is not air reception and does not occupy external radio frequencies; adjustable dash/dot threshold, character spacing, debouncing, prompts, and volume
 
-It is suitable for:
+### Useful Tips
 
-- Daily radio listening
-- Shortwave and SSB exploration
-- Morse code practice and CW learning
-- Network radio streaming
-- Weather and time synchronization features
-- Smart home-style radio device usage
+1. When listening to weak shortwave, SSB, or CW signals, it is recommended to turn off WiFi because WiFi can introduce interference noise.
+2. In FM/OIRT mode, long-press the knob to display RDS. In SSB mode, adjust the BFO beat frequency to clarify the single-sideband voice.
+3. All band station storage limit: the search list supports up to 500 entries.
 
-This design balances user-friendly control, feature-rich radio operation, and practical embedded-device functionality.
+# Computer / Sound Card
 
+1. Use the supplied USB charging cable to connect to a computer; the radio enters computer sound card mode and plays the computer audio output.
+2. When entering computer sound card mode, the system may show a black screen and restart; this is normal.
+
+# PC / Configuration
+
+1. Mainly used to upload network radio station lists, batch upload up to 1000 entries, configure network settings, weather settings, WiFi configuration, upload custom boot logo, and update firmware.
+2. Put the radio into PC configuration mode; entering this mode may cause a black screen and restart. Then open the PC software and select the device with the USB connection.
+
+# Weather / Meteorology
+
+1. Users can connect through a phone to the WiFi configuration interface, enter the local city weather ID in the weather field, and then obtain local weather information. If location is not detected, check whether the phone has location permission enabled. If needed, disable location restrictions or ask a large language model such as Doubao for your city weather ID (for example: "What is the weather ID for Shenzhen?").
+2. Overseas users need to enter coordinates (latitude/longitude) in the mobile interface or PC software to obtain weather information; the system will automatically display the city name.
+
+# Clock / Calendar
+
+1. Supports global clock display, manual time correction, or automatic correction via WiFi. After synchronization, the clock continues to operate while in standby or after power is removed.
+2. Enter settings to adjust other clock parameters.
+3. You can set scheduled power on/off times in the system settings and specify the startup audio, such as FM 99.9 MHz or a network radio station.
+
+# Language Prompt / Custom Logo
+
+1. Increases the playability of the device and provides reminders and guidance for players who do not find the operation convenient. After enabling it, the operation becomes slower; in the system settings, turning off the voice prompt simplifies the workflow.
+2. Users can create a 320x240 image and upload it via computer to change the startup screen.
+
+# Single Sideband / CW Decoding / CW Practice
+
+1. Single sideband is divided into upper sideband and lower sideband. Normally it cannot receive radio stations like FM at all times; it requires a specific device or the presence of other players transmitting SSB signals, or you may have your own device.
+2. CW decoding converts received Morse radio waves into readable code. The decoding structure is for reference only and is intended for entertainment and learning; it should not be treated as an exact real-world result and the result should be verified by the user.
+3. CW sending practice converts keying technique into readable results, turning dots and dashes into displayed output. It does not provide real transmission capability and is mainly used to practice keying technique.
