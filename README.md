@@ -1,67 +1,67 @@
 # HT5290-SI4732Radio-SSB-CW-practice
 
-## 项目简介
+## Project Overview
 
-这是一个基于 SI4732 收音芯片、面向短波无线电学习和实践的项目，重点支持 SSB（单边带）和 CW（连续波/莫尔斯码）相关场景。
+This project is based on the SI4732 radio receiver chip and is aimed at shortwave radio learning and experimentation, with a focus on SSB (Single Sideband) and CW (Continuous Wave / Morse code) scenarios.
 
-项目名称中的 HT5290、SI4732、SSB、CW 结合起来，说明它主要用于：
+The combination of HT5290, SI4732, SSB, and CW indicates that the project is mainly used for:
 
-- 进行短波接收器或无线电实验开发
-- 学习和验证 SI4732 的控制与调频/调幅能力
-- 练习 SSB 和 CW 相关接收与信号处理
-- 作为硬件开发、调试和实验的基础工程
+- Shortwave receiver or radio experimentation development
+- Learning and validating SI4732 control and AM/FM/SSB-related behavior
+- Practicing SSB and CW reception and signal processing
+- Providing a foundation for hardware development, debugging, and experiments
 
-## 这个项目是干什么的
+## What This Project Does
 
-从工程目标看，这类项目通常用于以下方向：
+From an engineering perspective, this type of project is typically used for the following purposes:
 
-1. 短波收音
-   - 通过 SI4732 芯片接收 AM、FM、SSB 等波段信号
-   - 适合短波广播、业余无线电、信号监听等使用场景
+1. Shortwave listening
+   - Receive AM, FM, SSB, and other signal bands through the SI4732 chip
+   - Suitable for shortwave broadcasting, amateur radio, and signal monitoring scenarios
 
-2. SSB 接收/学习
-   - 研究单边带调制与解调原理
-   - 用于无线电通信训练和实验
+2. SSB receive/learning
+   - Study the principles of single-sideband modulation and demodulation
+   - Used for radio communication training and experiments
 
-3. CW（摩尔斯码）练习
-   - 练习连续波信号发射、接收和解码
-   - 适合业余无线电和电子通信学习
+3. CW (Morse code) practice
+   - Practice continuous-wave signal transmission, reception, and decoding
+   - Suitable for amateur radio and electronics communication learning
 
-4. 硬件开发平台
-   - 结合 HT5290 这类控制板或开发平台完成系统集成
-   - 为收音机功能、显示、按键和音频处理提供基础开发环境
+4. Hardware development platform
+   - Integrate with HT5290-type control boards or development platforms
+   - Provide a basic development environment for radio functions, displays, buttons, and audio processing
 
-## 主要技术特点
+## Key Features
 
-- 基于 SI4732 作为核心射频/接收模块
-- 支持多种收音模式与波段接收需求
-- 面向 SSB/CW 相关通信训练和实验
-- 适合硬件开发、代码驱动、信号调试和功能验证
-- 适合用于学习无线电接收、通信协议和嵌入式控制
+- Based on the SI4732 as the core RF/receiver module
+- Supports multiple reception modes and band requirements
+- Focused on SSB/CW communication training and experimentation
+- Suitable for hardware development, code-driven control, signal debugging, and functional validation
+- Useful for learning radio reception, communication protocols, and embedded control
 
-## 适用人群
+## Target Users
 
-- 无线电爱好者
-- 业余无线电学习者
-- 嵌入式硬件开发者
-- 想研究 SI4732 收音模块的开发者
-- SSB/CW 练习与短波接收实验者
+- Radio enthusiasts
+- Amateur radio learners
+- Embedded hardware developers
+- Developers interested in SI4732 radio modules
+- SSB/CW practice and shortwave reception experimenters
 
-## 项目状态
+## Project Status
 
-当前仓库仍处于初始化和内容整理阶段，README 仅用于说明项目方向与目标。后续如果补充代码、原理图、驱动或固件文档，此处会同步更新。
+The repository is currently in the initialization and documentation stage. The README is intended to describe the project direction and goals. If code, schematics, drivers, or firmware documentation are added later, this section will be updated accordingly.
 
-## 后续规划
+## Planned Improvements
 
-建议后续完善以下内容：
+The following items are recommended for future development:
 
-- 硬件连接示意图
-- SI4732 控制说明
-- SSB/CW 调试流程
-- 代码结构说明
-- 功能清单与使用方法
-- 常见问题与调试记录
+- Hardware connection diagram
+- SI4732 control documentation
+- SSB/CW debugging workflow
+- Code structure overview
+- Feature list and usage instructions
+- Common issues and debugging notes
 
-## 说明
+## Note
 
-这个仓库的核心价值不是单一某个软件，而是围绕 SI4732 的短波收音、SSB/CW 训练和无线电实验实践建立的开发基础。它更偏向学习、实验和功能验证型项目。
+The core value of this repository is not a single standalone application, but a development foundation for shortwave reception, SSB/CW training, and radio experiments centered around SI4732. It is more of a learning, experimentation, and validation-oriented project.
